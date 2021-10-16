@@ -4,6 +4,18 @@ http://eclipse.baeyens.it/stable.php?OS=MacOS
 
 Tested on Sloeber IDE 4.4.0 for MacOS.
 
+To speed up your development process:
+1. Open **platform.sloeber.txt**:
+/Applications/Sloeber.app/Contents/Eclipse/arduinoPlugin/packages/PrusaResearchEinsyRAMBo/hardware/avr/1.0.0/platform.sloeber.txt
+
+2. Find the **"tools.avrdude.upload.pattern="** on the bottom of the file and replace **${program.verify}** by **${tools.avrdude.upload.params.noverify}**:
+tools.avrdude.upload.pattern="${tools.avrdude.cmd.path}" "-C${tools.avrdude.config.path}" ${upload.verbose} ${tools.avrdude.upload.params.noverify} -p${build.mcu} -c${upload.protocol} "-P${serial.port}" -b${upload.speed} -D "-Uflash:w:${build.path}/${build.project_name}.hex:i"
+
+3. Restart your IDE
+
+Now uploading of the firmware is 28 seconds faster due to disabling of the firmware readout.
+
+
 # Prusa Firmware MK3
 
 This repository contains the source code and the development versions of the firmware running on the [Original Prusa i3](https://prusa3d.com/) MK3S/MK3/MK2.5S/MK2.5 line of printers.
