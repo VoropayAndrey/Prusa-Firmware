@@ -1,5 +1,8 @@
-Original Prusa MK3S firmware project moved to Sloeber (Eclipse for Arduino) IDE.
+# Original Prusa MK3S firmware project moved to Sloeber (Eclipse for Arduino) IDE.
+Sloeber IDE download:
+http://eclipse.baeyens.it/stable.php?OS=MacOS
 
+Tested on Sloeber IDE 4.4.0 for MacOS.
 
 # Prusa Firmware MK3
 
